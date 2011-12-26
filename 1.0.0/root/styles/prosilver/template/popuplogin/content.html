@@ -1,0 +1,24 @@
+<div id="popupContact">  
+	<a id="popupContactClose">x</a>  
+	<h3>Login</h3>  
+	<p id="contactArea">  
+		If logged in then the user needs to be logged out here and shown a confirmation or we change the overall_header so if not logged in shown login link to here and if logged in shown logout link as at moment both are the same link. If they are logging in they get a login dialog box.
+		<br/><br/>
+		http://localhost/modernqi/boards/login_popup/ucp.php?mode=login
+		<br/><br/>  
+		Click out or Click on the X to close popup
+		<br/><br/>  		
+		<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+				<fieldset class="quick-login">
+					<label for="username">{L_USERNAME}:</label>&nbsp;<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" />
+					<label for="password">{L_PASSWORD}:</label>&nbsp;<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" />
+					<!-- IF S_AUTOLOGIN_ENABLED -->
+						| <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" name="autologin" id="autologin" /></label>
+					<!-- ENDIF -->
+					<input type="submit" name="login" value="{L_LOGIN}" class="button2" />
+					{S_LOGIN_REDIRECT}
+				</fieldset>
+			</form>
+	</p>  
+</div>  
+<div id="backgroundPopup"></div>  
